@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sayari Bhattacharya - Computational Biophysics Researcher">
+    <title>Sayari Bhattacharya | Biophysics & Research</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light-theme">
+    <!-- Navigation -->
+    <nav id="navbar" class="glass-nav">
+        <div class="nav-container">
+            <a href="#home" class="logo">Sayari Bhattacharya</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#education">Education & Awards</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Sayari</h1>
+            <h2 class="hero-subtitle" style="font-weight: 600; font-size: 1.8rem; color: var(--text-primary);">
+                Computational Biophysics Researcher @SNBNCBS</h2>
+            <p style="font-size: 1.25rem; font-weight: 600; color: var(--accent-1); margin-bottom: 0.5rem;">
+                Computational Biophysics | Molecular Simulations | Protein Aggregation
+            </p>
+            <p class="hero-bio"
+                style="font-size: 1.35rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;">
+                Understanding biomolecular complexity through computation, data and lens of Physics.
+            </p>
+            <div class="hero-cta">
+                <a href="resume.html" target="_blank" class="btn primary-btn">CV</a>
+                <a href="#research" class="btn secondary-btn">Research</a>
+                <a href="#contact" class="btn secondary-btn">Contact</a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <img src="assets/Image_me.jpg" alt="Sayari Bhattacharya Profile" class="hero-image" id="profile-img">
+            <div class="glass-card blob-1"></div>
+            <div class="glass-card blob-2"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section alt-bg">
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="about-grid">
+            <div class="about-text glass-panel fade-in">
+                <p>I am a doctoral researcher in computational biophysics working at the intersection of statistical
+                    physics and molecular modeling. My work focuses on understanding complex biomolecular processes
+                    through simulations and data-driven analysis, with particular interest in protein aggregation and
+                    conformational dynamics. I enjoy combining theoretical ideas with practical computational tools and
+                    uncover underlying physical principles.</p>
+                <p>Beyond research, I am driven by curiosity and the pursuit of a meaningful life shaped by science and
+                    creativity through coding, physics, chemistry, photography, nature, and fashion. I am also a
+                    lifelong admirer of Lionel Messi, whose dedication and consistency continue to inspire me.</p>
+            </div>
+
+            <div class="skills-panel glass-panel fade-in">
+                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem;">Core Skills</h3>
+                <ul style="list-style: none; margin-bottom: 1.5rem; color: var(--text-secondary);">
+                    <li>• Molecular Dynamics (GROMACS)</li>
+                    <li>• Enhanced Sampling (Metadynamics, REMD)</li>
+                    <li>• AI & Deep Learning (Auto-Encoders)</li>
+                </ul>
+
+                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem;">Programming</h3>
+                <ul style="list-style: none; margin-bottom: 1.5rem; color: var(--text-secondary);">
+                    <li>• Python (NumPy, Pandas, SciPy, Matplotlib)</li>
+                    <li>• Machine Learning (Clustering, Dimensionality Reduction)</li>
+                </ul>
+
+                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem;">Computational</h3>
+                <ul style="list-style: none; color: var(--text-secondary);">
+                    <li>• High-Performance Computing (HPC)</li>
+                    <li>• Large-Scale Data Analysis</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDP Section -->
+    <section id="idps" class="section">
+        <h2 class="section-title">The Enigma of <span class="gradient-text">IDPs</span></h2>
+
+        <div class="idp-grid fade-in">
+            <div class="idp-text glass-panel">
+                <h3 style="font-size: 1.8rem; color: var(--accent-1); margin-bottom: 1rem;">Intrinsically Disordered Proteins (IDPs)</h3>
+                <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-secondary);">In molecular biology, <strong>intrinsically disordered proteins (IDPs)</strong> stand apart. Rather than adopting a single stable structure, they exist as <strong>dynamic ensembles</strong> continuously shifting across a spectrum of conformations. This disorder is a defining feature enabling IDPs to play central roles in signaling, regulation, and phase separation where <strong>flexibility and transient interactions</strong> are essential. However, this flexibility also makes them vulnerable. Misregulated interactions can lead to <strong>pathological assemblies like amyloid fibrils</strong>. These systems often undergo <strong>disorder to order transitions</strong>, which remains an intriguing challenge in modern biophysics.</p>
+            </div>
+            <div class="idp-img-container">
+                <img src="assets/Fig1.png" alt="IDP Ensemble Visualization" class="idp-image zoomable">
+            </div>
+        </div>
+
+        <div class="idp-grid mt-5 fade-in">
+            <div class="idp-img-container">
+                <img src="assets/Fig2.png" alt="Free Energy Landscape" class="idp-image zoomable">
+            </div>
+            <div class="idp-text glass-panel">
+                <h3 style="font-size: 1.8rem; color: var(--accent-1); margin-bottom: 1rem;">A Physicist’s Perspective on Disorder</h3>
+                <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-secondary);">IDPs redefine how we model biomolecular systems. Instead of fluctuating around a single energy minimum, they navigate <strong>rugged free energy landscapes</strong> of many competing low energy states. Their behavior is intrinsically probabilistic and best understood as <strong>evolving ensembles</strong>. This raises key questions including how disorder gives rise to structure, how molecular sequences shape <strong>aggregation pathways</strong>, and how stability and dynamics interplay. Answering these requires a <strong>unified view of thermodynamics and kinetics</strong>. Concepts like entropy, conformational diffusion, and energy barriers are essential tools. IDPs bridge ideas from <strong>statistical physics and complex systems</strong>, making them a uniquely rich problem at the interface of physics and biology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section">
+        <h2 class="section-title">Research & <span class="gradient-text">Projects</span></h2>
+
+        <div class="experience-highlight glass-panel mb-4 fade-in" style="margin-bottom: 2rem;">
+            <h3>Research Overview</h3>
+            <p style="font-size: 1.05rem; line-height: 1.6;">I study how structure and dynamics emerge in complex biomolecular systems, with a focus on IDPs. My work combines computational and statistical approaches to uncover the physical principles underlying their behavior.</p>
+        </div>
+
+        <!-- Current Themes -->
+        <h3 class="subsection-title" style="font-size: 1.8rem; margin: 2rem 0 1rem; color: var(--text-primary);">Current
+            Research Themes</h3>
+        <div class="projects-grid">
+            <div class="project-card glass-panel fade-in delay-1">
+                <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🧬</div>
+                <h3 class="project-title" style="color: var(--accent-1); font-size: 1.4rem;">Protein Aggregation & Fibril Growth</h3>
+                <p class="theme-desc">Understanding the molecular mechanisms of protein aggregation and fibril elongation, with a focus on structural organization, polymorphism, and growth pathways in biomolecular systems, particularly involving intrinsically disordered proteins.</p>
+                <div class="theme-divider"></div>
+                <p class="theme-keywords"><strong>Keywords:</strong> aggregation mechanisms, polymorphism, fibril structure, molecular organization</p>
+            </div>
+            <div class="project-card glass-panel fade-in delay-2">
+                <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">⚙️</div>
+                <h3 class="project-title" style="color: var(--accent-1); font-size: 1.4rem;">Sampling Strategies</h3>
+                <p class="theme-desc">Designing efficient, data-driven approaches to explore complex conformational landscapes by directing simulations toward under-sampled and kinetically relevant regions. Employing enhanced sampling methods such as umbrella sampling, metadynamics, and REMD for improved exploration of biomolecular systems.</p>
+                <div class="theme-divider"></div>
+                <p class="theme-keywords"><strong>Keywords:</strong> adaptive sampling, enhanced sampling, replica exchange, rare events</p>
+            </div>
+            <div class="project-card glass-panel fade-in delay-3">
+                <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">📊</div>
+                <h3 class="project-title" style="color: var(--accent-1); font-size: 1.4rem;">Kinetic Modeling</h3>
+                <p class="theme-desc">Analyzing biomolecular dynamics through state-based representations to explore transition pathways, metastable states, and long-timescale behavior, supported by statistical and data-driven modeling approaches.</p>
+                <div class="theme-divider"></div>
+                <p class="theme-keywords"><strong>Keywords:</strong> state-space models, transition networks, dynamics</p>
+            </div>
+            <div class="project-card glass-panel fade-in delay-1">
+                <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🔺</div>
+                <h3 class="project-title" style="color: var(--accent-1); font-size: 1.4rem;">Free Energy Landscapes</h3>
+                <p class="theme-desc">Characterizing stability and transitions in biomolecular systems using statistical approaches and enhanced sampling techniques to map underlying energy landscapes and identify relevant conformational states.</p>
+                <div class="theme-divider"></div>
+                <p class="theme-keywords"><strong>Keywords:</strong> free energy, thermodynamics, stability, conformational transitions</p>
+            </div>
+            <div class="project-card glass-panel fade-in delay-2">
+                <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🤖</div>
+                <h3 class="project-title" style="color: var(--accent-1); font-size: 1.4rem;">AI & Machine Learning</h3>
+                <p class="theme-desc">Applying deep learning models (e.g., VAE, CNN-VAE, TVAE) to analyze high-dimensional biomolecular data, focusing on clustering, dimensionality reduction, and learning meaningful low-dimensional structural representations.</p>
+                <div class="theme-divider"></div>
+                <p class="theme-keywords"><strong>Keywords:</strong> machine learning, dimensionality reduction, VAE, clustering, representation learning</p>
+            </div>
+        </div>
+
+        <!-- Publications -->
+        <h3 class="subsection-title" style="font-size: 1.8rem; margin: 2rem 0 1rem; color: var(--text-primary);">
+            Publications</h3>
+        <div class="glass-panel fade-in">
+            <ul style="list-style-type: none; padding: 0;">
+                <li
+                    style="padding: 1rem; border-left: 4px solid var(--accent-1); background: rgba(0,0,0,0.02); border-radius: 4px;">
+                    <strong style="font-size: 1.1rem; color: var(--text-primary);">Mapping conformational landscape in
+                        protein folding: Benchmarking dimensionality reduction and clustering techniques on the Trp-Cage
+                        mini-protein</strong><br>
+                    <span style="color: var(--text-secondary); font-style: italic;">Biophysical Chemistry
+                        (2025)</span><br>
+                    <a href="https://doi.org/10.1016/j.bpc.2025.107389" target="_blank"
+                        style="color: var(--accent-1); text-decoration: none; font-weight: 500;">🔗 DOI:
+                        10.1016/j.bpc.2025.107389</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- M.Sc Projects (Retained from history) -->
+        <h3 class="subsection-title" style="font-size: 1.8rem; margin: 2rem 0 1rem; color: var(--text-primary);">M.Sc
+            Projects</h3>
+        <div class="projects-grid">
+            <div class="project-card glass-panel fade-in">
+                <img src="assets/copy-of-nucleation-pathways.jpeg" alt="Nucleation" class="project-img">
+                <h3 class="project-title">Study of Nucleation for Crystallization from Solution</h3>
+                <p class="project-duration" style="color: var(--text-secondary); font-size: 0.9rem;">Sep 2022 - Dec 2022
+                </p>
+                <ul style="font-size: 0.95rem; margin-left: 1.2rem; color: var(--text-secondary);">
+                    <li>Molecular Dynamics techniques on Silver nanoparticles and Supersaturated NaCl solutions.</li>
+                </ul>
+            </div>
+            <div class="project-card glass-panel fade-in">
+                <img src="assets/sampling.jpeg" alt="Sampling" class="project-img">
+                <h3 class="project-title">Enhanced Sampling of Rare Events in MD Simulation</h3>
+                <p class="project-duration" style="color: var(--text-secondary); font-size: 0.9rem;">Jan 2023 - May 2023
+                </p>
+                <ul style="font-size: 0.95rem; margin-left: 1.2rem; color: var(--text-secondary);">
+                    <li>Investigated stability of Amyloid fibril systems using Metadynamics.</li>
+                </ul>
+            </div>
+            <div class="project-card glass-panel fade-in">
+                <img src="assets/mbr-7.jpg" alt="Galaxy" class="project-img">
+                <h3 class="project-title">Initial Mass Function in Galactic Star Forming Region</h3>
+                <p class="project-duration" style="color: var(--text-secondary); font-size: 0.9rem;">M.Sc Project</p>
+                <ul style="font-size: 0.95rem; margin-left: 1.2rem; color: var(--text-secondary);">
+                    <li>Researched and learned about recent features of galactic star formation.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Awards Section -->
+    <section id="education" class="section alt-bg">
+        <h2 class="section-title">Education & <span class="gradient-text">Awards</span></h2>
+        <div class="timeline">
+            <div class="timeline-item glass-panel fade-in">
+                <div class="timeline-date">2021 - 2023</div>
+                <div class="timeline-content">
+                    <h3>Master of Science, Physics</h3>
+                    <h4>S.N. Bose National Centre for Basic Sciences</h4>
+                    <p>Graduated with 86% | 3rd highest scorer in class.</p>
+                </div>
+            </div>
+            <div class="timeline-item glass-panel fade-in">
+                <div class="timeline-date">2018 - 2021</div>
+                <div class="timeline-content">
+                    <h3>Bachelor of Science, Physics</h3>
+                    <h4>Jadavpur University</h4>
+                    <p>81.67% (CGPA: 8.77) | Top 10 in University.</p>
+                </div>
+            </div>
+
+            <div class="awards-grid" style="margin-top: 2rem;">
+                <div class="award-card glass-panel fade-in">
+                    <div class="award-icon">🎯</div>
+                    <h3>JAM and JEST 2021</h3>
+                    <p style="font-weight: 500; color: var(--accent-1);">Qualified</p>
+                </div>
+                <div class="award-card glass-panel fade-in">
+                    <div class="award-icon">🌟</div>
+                    <h3>DST INSPIRE SHE</h3>
+                    <p>Top 1% of students nationwide.</p>
+                </div>
+                <div class="award-card glass-panel fade-in">
+                    <div class="award-icon">🎓</div>
+                    <h3>GATE-2023</h3>
+                    <p style="font-weight: 500; color: var(--accent-1);">Qualified</p>
+                </div>
+                <div class="award-card glass-panel fade-in">
+                    <div class="award-icon">🏆</div>
+                    <h3>JBNSTS Senior Scholar</h3>
+                    <p>Top 50 students in the state.</p>
+                </div>
+                <div class="award-card glass-panel fade-in">
+                    <div class="award-icon">🥇</div>
+                    <h3>Best Student Award (2016)</h3>
+                    <p>West Bengal, 10th Board Exams.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <h2 class="section-title">My <span class="gradient-text">Gallery</span></h2>
+        <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">Maybe I love to click and love to be
+            clicked more than anything else!</p>
+        <div class="image-gallery-grid">
+            <div class="gallery-item glass-panel fade-in"><img src="assets/img-20221223.jpeg" alt="A winter evening!"
+                    loading="lazy">
+                <p>A winter evening!</p>
+            </div>
+            <div class="gallery-item glass-panel fade-in"><img src="assets/img20221219001635.jpeg" alt="That moment!"
+                    loading="lazy">
+                <p>That moment!</p>
+            </div>
+            <div class="gallery-item glass-panel fade-in"><img src="assets/img20221004123515.jpeg"
+                    alt="Durga Puja and Friends!" loading="lazy">
+                <p>Durga Puja & Friends!</p>
+            </div>
+            <div class="gallery-item glass-panel fade-in"><img src="assets/Bookfair.jpg" alt="Argentina" loading="lazy">
+                <p>Argentina</p>
+            </div>
+            <div class="gallery-item glass-panel fade-in"><img src="assets/Cover_Art1.png" alt="Emergence"
+                    loading="lazy">
+                <p>Emergence</p>
+            </div>
+            <div class="gallery-item glass-panel fade-in"><img src="assets/Header_Me.jpg" alt="Curiosity!"
+                    loading="lazy">
+                <p>Curiosity!</p>
+            </div>
+        </div>
+
+        <h3 class="subsection-title"
+            style="font-size: 1.8rem; margin: 3rem 0 1.5rem; color: var(--text-primary); text-align: center;">Mobile
+            Photography</h3>
+        <div class="image-gallery-grid">
+            <div class="gallery-item glass-panel fade-in"><img src="assets/img-20221014.jpeg"
+                    alt="A beautiful dawn in Kolkata!" loading="lazy">
+                <p>A beautiful dawn!</p>
+            </div>
+            <div class="gallery-item glass-panel fade-in"><img src="assets/img20220719145738.jpeg" alt="Port..."
+                    loading="lazy">
+                <p>Port...</p>
+            </div>
+            <div class="gallery-item glass-panel fade-in"><img src="assets/MP1.jpg" alt="Bloom" loading="lazy">
+                <p>Bloom</p>
+            </div>
+            <div class="gallery-item glass-panel fade-in"><img src="assets/MP2.jpg" alt="Serenity" loading="lazy">
+                <p>Serenity</p>
+            </div>
+            <div class="gallery-item glass-panel fade-in"><img src="assets/MP3.jpg" alt="Vibrance" loading="lazy">
+                <p>Vibrance</p>
+            </div>
+            <div class="gallery-item glass-panel fade-in"><img src="assets/MP4.jpg" alt="Flourish" loading="lazy">
+                <p>Flourish</p>
+            </div>
+            <div class="gallery-item glass-panel fade-in"><img src="assets/MP5.jpg" alt="Harmony" loading="lazy">
+                <p>Harmony</p>
+            </div>
+            <div class="gallery-item glass-panel fade-in"><img src="assets/MP6.jpg" alt="Chilli's" loading="lazy">
+                <p>Chilli's</p>
+            </div>
+            <div class="gallery-item glass-panel fade-in"><img src="assets/MP7.jpg" alt="Lusscibo" loading="lazy">
+                <p>Lusscibo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="section alt-bg">
+        <h2 class="section-title">Beyond <span class="gradient-text">Research</span></h2>
+        <div class="hobbies-grid">
+            <div class="hobby-card glass-panel hover-lift">
+                <div class="hobby-icon">🔭</div>
+                <h3>Stargazing</h3>
+                <p>I find immense joy in gazing at the stars. Participated in Astronomy Camps.</p>
+            </div>
+            <div class="hobby-card glass-panel hover-lift">
+                <div class="hobby-icon">📸</div>
+                <h3>Photography</h3>
+                <p>Capturing lovely moments through the lens of nature photography.</p>
+            </div>
+            <div class="hobby-card glass-panel hover-lift">
+                <div class="hobby-icon">🎨</div>
+                <h3>Painting</h3>
+                <p>A cherished childhood activity that I eagerly resume during moments of respite.</p>
+            </div>
+            <div class="hobby-card glass-panel hover-lift">
+                <div class="hobby-icon">📚</div>
+                <h3>Literature</h3>
+                <p>Immersing myself in a wide array of genres, from science to detective stories.</p>
+            </div>
+            <div class="hobby-card glass-panel hover-lift">
+                <div class="hobby-icon">🎬</div>
+                <h3>Movies & Music</h3>
+                <p>I absolutely love watching movies and also have a deep, enduring interest in music.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <section id="contact" class="section contact-section">
+        <div class="contact-container glass-panel">
+            <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+            <div class="contact-links" style="margin-top: 1rem;">
+                <a href="mailto:sayaribhattacharya4@gmail.com" class="contact-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    Email
+                </a>
+                <a href="https://linkedin.com/in/sayari-bhattacharya-25b314219" target="_blank" class="contact-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/bsayari10" target="_blank" class="contact-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p style="color: var(--text-secondary); text-align: center; margin-top: 2rem;">&copy; <span id="year"></span>
+            Sayari Bhattacharya.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

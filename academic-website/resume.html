@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayari Bhattacharya - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #475569;
+            --accent: #2563eb;
+            --light-bg: #f8fafc;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #cbd5e1;
+            color: var(--primary);
+            line-height: 1.6;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cv-container {
+            background: white;
+            width: 100%;
+            max-width: 850px;
+            padding: 3rem 4rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 4px;
+        }
+
+        /* Print Settings */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                padding: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .name {
+            font-family: 'Lora', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--secondary);
+            flex-wrap: wrap;
+        }
+
+        .contact-info a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-family: 'Lora', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .summary {
+            font-size: 1rem;
+            color: var(--secondary);
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .skill-category {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .skill-list {
+            color: var(--secondary);
+        }
+
+        .item {
+            margin-bottom: 1.5rem;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.3rem;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .item-subtitle {
+            font-weight: 500;
+            color: var(--accent);
+            font-size: 0.95rem;
+        }
+
+        .item-date {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .item-desc {
+            font-size: 0.95rem;
+            color: var(--secondary);
+            margin-top: 0.5rem;
+        }
+
+        .item-bullets {
+            margin-top: 0.5rem;
+            margin-left: 1.2rem;
+            font-size: 0.95rem;
+            color: var(--secondary);
+        }
+
+        .item-bullets li {
+            margin-bottom: 0.3rem;
+        }
+
+        .print-btn {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            font-family: inherit;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+            transition: all 0.2s;
+        }
+
+        .print-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn no-print" onclick="window.print()">Download PDF</button>
+
+    <div class="cv-container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="name">Sayari Bhattacharya</h1>
+            <div class="title">Computational Biophysics Researcher | Data Scientist</div>
+            <div class="contact-info">
+                <span>📍 Kolkata, India</span>
+                <a href="mailto:sayaribhattacharya4@gmail.com">✉️ sayaribhattacharya4@gmail.com</a>
+                <a href="https://linkedin.com/in/sayari-bhattacharya-25b314219" target="_blank">🔗 LinkedIn</a>
+                <a href="https://github.com/bsayari10" target="_blank">💻 GitHub</a>
+                <a href="index.html">🌐 Website</a>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary">
+                Doctoral researcher specializing in computational biophysics and data-driven molecular modeling. Proven expertise in molecular dynamics simulations, statistical modeling, and large-scale analytical workflows using High-Performance Computing (HPC). Deeply experienced in designing automated scripts and applying dimensionality reduction techniques to translate highly complex, multidimensional physical systems into actionable insights. Seeking to leverage robust analytical and programming skills in cross-functional academic research and industry data science environments.
+            </p>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">Programming & ML:</div>
+                <div class="skill-list">Python (NumPy, SciPy, Pandas), AI/Deep Learning (VAEs, CNN-VAE, TVAE), Linux, Git, Workflow Automation</div>
+                
+                <div class="skill-category">Molecular Simulation:</div>
+                <div class="skill-list">GROMACS, Enhanced Sampling (Metadynamics, REMD, Umbrella), Adaptive Sampling, Free Energy Mapping</div>
+                
+                <div class="skill-category">Data & Analytics:</div>
+                <div class="skill-list">Dimensionality Reduction, Clustering, Representation Learning, Markov State Models (MSMs), Statistical Inference</div>
+            </div>
+        </div>
+
+        <!-- Experience & Projects -->
+        <div class="section">
+            <h2 class="section-title">Research Experience & Key Projects</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Intrinsically Disordered Proteins & Amyloid Fibril Growth</div>
+                </div>
+                <ul class="item-bullets">
+                    <li>Led mechanistic investigations into amyloid fibril elongation and structural polymorphism using high-performance molecular simulations.</li>
+                    <li>Modeled disordered protein ensembles to extract transition pathways, bridging the gap between statistical physics and molecular biology.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Adaptive Sampling & Kinetic Network Modeling</div>
+                </div>
+                <ul class="item-bullets">
+                    <li>Developed and executed data-driven automated simulation protocols to efficiently navigate rugged free energy landscapes and isolate rare, under-sampled events.</li>
+                    <li>Constructed complex kinetic state-based networks to formally characterize biomolecular metastable states and long-timescale dynamic behavior.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Conformational Landscape Mapping Pipeline</div>
+                    <div class="item-date">Published 2025</div>
+                </div>
+                <ul class="item-bullets">
+                    <li>Benchmarked multiple dimensionality reduction and data clustering algorithms on folding models of the Trp-Cage mini-protein.</li>
+                    <li>Designed fully automated Python pipelines (utilizing Pandas and SciPy) to process and visualize large-scale high-dimensional thermodynamic metrics.</li>
+                </ul>
+            </div>
+            
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Enhanced Sampling of Rare Events in MD Simulation</div>
+                    <div class="item-subtitle">M.Sc Project</div>
+                    <div class="item-date">Jan 2023 - May 2023</div>
+                </div>
+                <ul class="item-bullets">
+                    <li>Investigated the deep thermodynamic stability of Amyloid fibril systems using advanced Metadynamics techniques.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">M.Sc in Physics</div>
+                    <div class="item-date">2021 - 2023</div>
+                </div>
+                <div class="item-subtitle">S.N. Bose National Centre for Basic Sciences</div>
+                <div class="item-desc">Graduated with 86% | 3rd highest scorer in class.</div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">B.Sc in Physics</div>
+                    <div class="item-date">2018 - 2021</div>
+                </div>
+                <div class="item-subtitle">Jadavpur University</div>
+                <div class="item-desc">81.67% (CGPA: 8.77) | Top 10 ranking in University.</div>
+            </div>
+        </div>
+
+        <!-- Publications -->
+        <div class="section">
+            <h2 class="section-title">Publications</h2>
+            <div class="item">
+                <div class="item-desc" style="color: var(--primary);">
+                    <strong>Mapping conformational landscape in protein folding: Benchmarking dimensionality reduction and clustering techniques on the Trp-Cage mini-protein</strong><br>
+                    <span style="color: var(--secondary); font-style: italic;">Biophysical Chemistry (2025)</span><br>
+                    <a href="https://doi.org/10.1016/j.bpc.2025.107389" style="color: var(--accent); text-decoration: none;">🔗 DOI: 10.1016/j.bpc.2025.107389</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Honors & Awards -->
+        <div class="section">
+            <h2 class="section-title">Honors & Awards</h2>
+            <ul class="item-bullets" style="list-style-type: square;">
+                <li><strong>GATE 2023 Qualified</strong> - Highly competitive national examination in Physics.</li>
+                <li><strong>JAM and JEST 2021 Qualified</strong> - National level physics entrance examinations.</li>
+                <li><strong>DST INSPIRE SHE Fellowship</strong> - Awarded to the top 1% of science students nationwide.</li>
+                <li><strong>JBNSTS Senior Scholar</strong> - Selected among the top 50 students in West Bengal.</li>
+                <li><strong>Best Student Award (2016)</strong> - Recognized for academic excellence in West Bengal 10th Board Exams.</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
