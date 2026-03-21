@@ -586,28 +586,129 @@ p {
     height: 20px;
 }
 
+/* Responsive Design */
 @media (max-width: 992px) {
+    /* Hero Section */
     .hero-section {
         flex-direction: column;
         text-align: center;
-        padding-top: 6rem;
+        padding-top: calc(var(--nav-height) + 2rem);
         gap: 2rem;
     }
     
     .hero-cta {
         justify-content: center;
     }
-    
-    .about-grid {
-        grid-template-columns: 1fr;
+
+    .hero-title {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
     }
     
-    .idp-grid {
+    /* Layout Grids */
+    .about-grid, .idp-grid, .projects-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    /* IDP Section Reordering on Mobile */
+    .idp-grid:nth-of-type(2) .idp-img-container {
+        order: 2;
+    }
+    .idp-grid:nth-of-type(2) .idp-text {
+        order: 1;
     }
     
     .reverse-mobile {
         order: 2;
+    }
+
+    /* Hobbies Grid */
+    .hobbies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    /* Awards Grid */
+    .awards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .section {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    /* Alt-bg section padding fix */
+    .alt-bg > * {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navigation - Hamburger Menu */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: var(--nav-height);
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(15px);
+        width: 100%;
+        height: calc(100vh - var(--nav-height));
+        text-align: center;
+        transition: right 0.3s ease-in-out;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        padding: 2rem 0;
+        gap: 1.5rem;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .glass-panel {
+        padding: 1.5rem;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-bio {
+        font-size: 1.15rem !important;
+    }
+    .hero-subtitle {
+        font-size: 1.4rem !important;
     }
 }
