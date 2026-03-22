@@ -3,383 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sayari Bhattacharya - CV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Sayari Bhattacharya - Curriculum Vitae</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         :root {
-            --primary: #0f172a;
-            --secondary: #475569;
-            --accent: #2563eb;
-            --light-bg: #f8fafc;
-            --border: #e2e8f0;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+            --bg-color: #FAFAF8;
+            --text-primary: #333333;
+            --text-secondary: #6B6B6B;
+            --accent-1: #D2A679; /* Caramel/Nude */
+            --border: #F1F1F1;
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #cbd5e1;
-            color: var(--primary);
-            line-height: 1.6;
-            padding: 2rem;
-            display: flex;
-            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
         }
 
         .cv-container {
-            background: white;
-            width: 100%;
-            max-width: 850px;
-            padding: 3rem 4rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-radius: 4px;
+            background: #FFFFFF;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            position: relative;
         }
 
         /* Print Settings */
         @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-            .cv-container {
-                box-shadow: none;
-                padding: 0;
-                width: 100%;
-                max-width: 100%;
-            }
-            .no-print {
-                display: none !important;
-            }
-        }
-
-        .header {
-            text-align: center;
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 1.5rem;
-            margin-bottom: 2rem;
+            body { background: white; padding: 0 !important; }
+            .cv-container { box-shadow: none; border: none; border-radius: 0; background: white; padding: 0 !important; max-width: 100% !important; margin: 0 !important; }
+            .no-print { display: none !important; }
+            .text-accent { color: #D2A679 !important; }
         }
 
         .name {
-            font-family: 'Lora', serif;
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .title {
-            font-size: 1.2rem;
-            color: var(--accent);
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            font-size: 0.9rem;
-            color: var(--secondary);
-            flex-wrap: wrap;
-        }
-
-        .contact-info a {
-            color: var(--secondary);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .contact-info a:hover {
-            color: var(--accent);
-        }
-
-        .section {
-            margin-bottom: 2rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
         }
 
         .section-title {
-            font-family: 'Lora', serif;
-            font-size: 1.4rem;
-            color: var(--primary);
-            border-bottom: 1px solid var(--border);
+            font-family: 'Playfair Display', serif;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--accent-1);
+            display: inline-block;
             padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-bottom: 2rem;
+        }
+        
+        a.hover-primary {
+            transition: color 0.3s ease;
+        }
+        a.hover-primary:hover {
+            color: var(--accent-1) !important;
+        }
+        
+        .cv-list-item {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+        .cv-list-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            background-color: var(--bg-color);
+            border: 2px solid var(--accent-1);
+            border-radius: 50%;
         }
 
-        .summary {
-            font-size: 1rem;
-            color: var(--secondary);
-            text-align: justify;
+        .text-accent {
+            color: var(--accent-1);
         }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 1rem;
-            font-size: 0.95rem;
-        }
-
-        .skill-category {
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        .skill-list {
-            color: var(--secondary);
-        }
-
-        .item {
-            margin-bottom: 1.5rem;
-        }
-
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 0.3rem;
-        }
-
-        .item-title {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: var(--primary);
-        }
-
-        .item-subtitle {
+        
+        .btn-editorial {
+            background: #FFFFFF;
+            border: 1px solid #E0E0E0;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
             font-weight: 500;
-            color: var(--accent);
-            font-size: 0.95rem;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
-
-        .item-date {
-            font-size: 0.9rem;
-            color: var(--secondary);
-            font-weight: 500;
-        }
-
-        .item-desc {
-            font-size: 0.95rem;
-            color: var(--secondary);
-            margin-top: 0.5rem;
-        }
-
-        .item-bullets {
-            margin-top: 0.5rem;
-            margin-left: 1.2rem;
-            font-size: 0.95rem;
-            color: var(--secondary);
-        }
-
-        .item-bullets li {
-            margin-bottom: 0.3rem;
-        }
-
-        .print-btn {
-            position: fixed;
-            top: 2rem;
-            right: 2rem;
-            background: var(--accent);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 500;
-            font-family: inherit;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
-            transition: all 0.2s;
-        }
-
-        .print-btn:hover {
-            background: #1d4ed8;
+        .btn-editorial:hover {
+            background: var(--text-primary);
+            color: #FFFFFF;
             transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem;
-            }
-            .cv-container {
-                padding: 2rem;
-            }
-            .name {
-                font-size: 2rem;
-            }
-            .skills-grid {
-                grid-template-columns: 1fr;
-                gap: 0.5rem;
-            }
-            .skill-category {
-                margin-top: 0.5rem;
-            }
-            .item-header {
-                flex-direction: column;
-                gap: 0.2rem;
-            }
-            .contact-info {
-                flex-direction: column;
-                gap: 0.5rem;
-                align-items: center;
-            }
-        }
-        @media (max-width: 480px) {
-            body {
-                padding: 0;
-            }
-            .cv-container {
-                padding: 1.5rem;
-                box-shadow: none;
-                border-radius: 0;
-            }
-            .print-btn {
-                position: static;
-                display: block;
-                width: 100%;
-                text-align: center;
-                margin-bottom: 1.5rem;
-                border-radius: 0;
-            }
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-color: var(--text-primary);
         }
     </style>
 </head>
-<body>
+<body class="py-4 py-md-5 d-flex justify-content-center">
 
-    <button class="print-btn no-print" onclick="window.print()">Download PDF</button>
+    <button class="btn btn-editorial position-fixed top-0 end-0 m-3 m-md-4 px-4 py-2 no-print" style="z-index: 100;" onclick="window.print()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="me-2" style="margin-top: -2px;" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Export PDF
+    </button>
 
-    <div class="cv-container">
-        <!-- Header -->
-        <div class="header">
-            <h1 class="name">Sayari Bhattacharya</h1>
-            <div class="title">Computational Biophysics Researcher | Data Scientist</div>
-            <div class="contact-info">
-                <span>📍 Kolkata, India</span>
-                <a href="mailto:sayaribhattacharya4@gmail.com">✉️ sayaribhattacharya4@gmail.com</a>
-                <a href="https://linkedin.com/in/sayari-bhattacharya-25b314219" target="_blank">🔗 LinkedIn</a>
-                <a href="https://github.com/bsayari10" target="_blank">💻 GitHub</a>
-                <a href="index.html">🌐 Website</a>
+    <div class="cv-container container p-4 p-md-5 my-md-2" style="max-width: 900px; padding-top: 4rem !important; padding-bottom: 4rem !important;">
+        <div class="cv-content">
+            <!-- Header -->
+            <div class="text-center border-bottom pb-5 mb-5" style="border-color: var(--border) !important;">
+                <div class="mb-4 d-flex justify-content-center">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 50px; height: 50px; color: var(--text-primary);">
+                        <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="2" opacity="0.8"/>
+                        <ellipse cx="50" cy="50" rx="20" ry="40" transform="rotate(45 50 50)" stroke="var(--accent-1)" stroke-width="2" opacity="0.9"/>
+                        <ellipse cx="50" cy="50" rx="20" ry="40" transform="rotate(-45 50 50)" stroke="currentColor" stroke-width="2" opacity="0.6"/>
+                        <circle cx="50" cy="50" r="5" fill="var(--accent-1)"/>
+                    </svg>
+                </div>
+                <h1 class="name display-4 fw-medium mb-3">Sayari Bhattacharya</h1>
+                <div class="fs-5 fw-light mb-4 text-accent" style="font-style: italic;">
+                    Doctoral Researcher in Computational Biophysics
+                </div>
+                <div class="d-flex justify-content-center gap-3 flex-wrap text-secondary small fw-medium" style="letter-spacing: 0.02em;">
+                    <span>Kolkata, India</span>
+                    <span class="text-muted d-none d-sm-inline opacity-25">|</span>
+                    <a href="mailto:sayaribhattacharya4@gmail.com" class="text-decoration-none text-secondary hover-primary">sayaribhattacharya4@gmail.com</a>
+                    <span class="text-muted d-none d-sm-inline opacity-25">|</span>
+                    <a href="https://linkedin.com/in/sayari-bhattacharya-25b314219" target="_blank" class="text-decoration-none text-secondary hover-primary">LinkedIn</a>
+                    <span class="text-muted d-none d-sm-inline opacity-25">|</span>
+                    <a href="https://github.com/bsayari10" target="_blank" class="text-decoration-none text-secondary hover-primary">GitHub Profile</a>
+                </div>
             </div>
-        </div>
 
-        <!-- Professional Summary -->
-        <div class="section">
-            <h2 class="section-title">Professional Summary</h2>
-            <p class="summary">
-                Doctoral researcher specializing in computational biophysics and data-driven molecular modeling. Proven expertise in molecular dynamics simulations, statistical modeling, and large-scale analytical workflows using High-Performance Computing (HPC). Deeply experienced in designing automated scripts and applying dimensionality reduction techniques to translate highly complex, multidimensional physical systems into actionable insights. Seeking to leverage robust analytical and programming skills in cross-functional academic research and industry data science environments.
-            </p>
-        </div>
+            <!-- Professional Summary -->
+            <div class="mb-5 pb-3">
+                <h2 class="section-title fs-5 fw-medium">Professional Summary</h2>
+                <p class="text-secondary fw-light" style="font-size: 1.05rem; line-height: 1.9;">
+                    I am a doctoral researcher specializing in computational biophysics and data-driven molecular modeling. I orchestrate high-performance molecular dynamics simulations, statistical modeling, and extensive analytical pipelines to understand how proteins fold. I am highly experienced in deploying advanced sampling methods and employing rigorous dimensionality reduction frameworks to distill intricate, multi-dimensional physical landscapes into precise theoretical insights.
+                </p>
+            </div>
 
-        <!-- Technical Skills -->
-        <div class="section">
-            <h2 class="section-title">Technical Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">Programming & ML:</div>
-                <div class="skill-list">Python (NumPy, SciPy, Pandas), AI/Deep Learning (VAEs, CNN-VAE, TVAE), Linux, Git, Workflow Automation</div>
+            <!-- Technical Skills -->
+            <div class="mb-5 pb-3">
+                <h2 class="section-title fs-5 fw-medium">Technical Expertise</h2>
+                <div class="row gx-4 gy-4 fw-medium">
+                    <div class="col-md-3 text-dark text-uppercase fs-6">Computation</div>
+                    <div class="col-md-9 text-secondary border-bottom pb-4 fw-light" style="border-color: var(--border) !important;">Python (NumPy, SciPy, Pandas), Artificial Intelligence Architectures (VAEs, CNN-VAE, TVAE), Linux Environments, Git Version Control</div>
+                    
+                    <div class="col-md-3 text-dark text-uppercase fs-6 mt-md-0 pt-2">Simulation</div>
+                    <div class="col-md-9 text-secondary border-bottom pb-4 pt-2 fw-light" style="border-color: var(--border) !important;">GROMACS, Enhanced Sampling Regimes (Metadynamics, Replica Exchange, Umbrella Sampling), Conformational Navigation</div>
+                    
+                    <div class="col-md-3 text-dark text-uppercase fs-6 mt-md-0 pt-2">Analytics</div>
+                    <div class="col-md-9 text-secondary pt-2 fw-light">Dimensionality Reduction, Unsupervised Clustering, Markov State Models (MSMs), Rigorous Statistical Mechanics</div>
+                </div>
+            </div>
+
+            <!-- Experience & Projects -->
+            <div class="mb-5 pb-3">
+                <h2 class="section-title fs-5 fw-medium">Research & Investigations</h2>
                 
-                <div class="skill-category">Molecular Simulation:</div>
-                <div class="skill-list">GROMACS, Enhanced Sampling (Metadynamics, REMD, Umbrella), Adaptive Sampling, Free Energy Mapping</div>
+                <div class="mb-5">
+                    <div class="d-flex justify-content-between align-items-baseline mb-3">
+                        <div class="fw-medium fs-5 text-dark" style="font-family: 'Playfair Display', serif;">Intrinsically Disordered Proteins & Amyloidosis Mechanisms</div>
+                    </div>
+                    <ul class="text-secondary fw-light list-unstyled mb-0" style="font-size: 1.05rem;">
+                        <li class="cv-list-item">Led comprehensive mechanistic analyses delineating amyloid fibril elongation paradigms and structural polymorphic variance utilizing high-performance modeling.</li>
+                        <li class="cv-list-item">Simulated natively disordered protein ensembles to architect theoretical transition maps, establishing robust connections between statistical physics and molecular biology.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-5">
+                    <div class="d-flex justify-content-between align-items-baseline mb-3">
+                        <div class="fw-medium fs-5 text-dark" style="font-family: 'Playfair Display', serif;">Conformational Mapping & Kinetic Network Development</div>
+                    </div>
+                    <ul class="text-secondary fw-light list-unstyled mb-0" style="font-size: 1.05rem;">
+                        <li class="cv-list-item">Designed algorithmic simulation pipelines to autonomously navigate rugged thermodynamic free energy boundaries, recovering mathematically rare macroscopic phenomena.</li>
+                        <li class="cv-list-item">Engineered expansive kinetic equilibrium networks to formalize biomolecular metastable clustering operations across extended timescales.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-5">
+                    <div class="d-flex justify-content-between align-items-baseline flex-wrap mb-3">
+                        <div class="fw-medium fs-5 text-dark" style="font-family: 'Playfair Display', serif;">Thermodynamic Landscape Benchmarking Pipeline</div>
+                        <div class="fw-medium text-accent" style="letter-spacing: 0.05em;">Biophysical Chemistry (2025)</div>
+                    </div>
+                    <ul class="text-secondary fw-light list-unstyled mb-0" style="font-size: 1.05rem;">
+                        <li class="cv-list-item">Performed systematic evaluations of diverse dimensionality reduction architectures against classic native folding assemblies of the Trp-Cage mini-protein.</li>
+                        <li class="cv-list-item">Created extensive automated mathematical processing suites leveraging SciPy data structures to synthesize complex continuous structural coordinate pipelines.</li>
+                    </ul>
+                </div>
                 
-                <div class="skill-category">Data & Analytics:</div>
-                <div class="skill-list">Dimensionality Reduction, Clustering, Representation Learning, Markov State Models (MSMs), Statistical Inference</div>
-            </div>
-        </div>
-
-        <!-- Experience & Projects -->
-        <div class="section">
-            <h2 class="section-title">Research Experience & Key Projects</h2>
-            
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">Intrinsically Disordered Proteins & Amyloid Fibril Growth</div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between align-items-baseline flex-wrap mb-3">
+                        <div class="fw-medium fs-5 text-dark" style="font-family: 'Playfair Display', serif;">Enhanced Sampling Paradigms in Fibrillar Complexes</div>
+                        <div class="text-secondary fw-light text-uppercase small">Jan 2023 - May 2023</div>
+                    </div>
+                    <ul class="text-secondary fw-light list-unstyled mb-0" style="font-size: 1.05rem;">
+                        <li class="cv-list-item">Calculated deep thermodynamic stabilization energies inherent to early-stage Amyloid formation sequences through intensive Metadynamics applications.</li>
+                    </ul>
                 </div>
-                <ul class="item-bullets">
-                    <li>Led mechanistic investigations into amyloid fibril elongation and structural polymorphism using high-performance molecular simulations.</li>
-                    <li>Modeled disordered protein ensembles to extract transition pathways, bridging the gap between statistical physics and molecular biology.</li>
+            </div>
+
+            <!-- Education -->
+            <div class="mb-5 pb-3">
+                <h2 class="section-title fs-5 fw-medium">Academic Background</h2>
+                <div class="mb-4 pb-4 border-bottom" style="border-color: var(--border) !important;">
+                    <div class="d-flex justify-content-between align-items-baseline flex-wrap mb-2">
+                        <div class="fw-medium fs-5 text-dark" style="font-family: 'Playfair Display', serif;">Master of Science, Physics</div>
+                        <div class="text-secondary fw-light text-uppercase small" style="letter-spacing: 0.05em;">2021 - 2023</div>
+                    </div>
+                    <div class="fw-medium text-accent">S.N. Bose National Centre for Basic Sciences</div>
+                    <div class="fw-light text-secondary mt-2">Graduated with Distinction (86%) | Rank: 3rd in academic cohort.</div>
+                </div>
+
+                <div>
+                    <div class="d-flex justify-content-between align-items-baseline flex-wrap mb-2">
+                        <div class="fw-medium fs-5 text-dark" style="font-family: 'Playfair Display', serif;">Bachelor of Science, Physics</div>
+                        <div class="text-secondary fw-light text-uppercase small" style="letter-spacing: 0.05em;">2018 - 2021</div>
+                    </div>
+                    <div class="fw-medium text-accent">Jadavpur University</div>
+                    <div class="fw-light text-secondary mt-2">CGPA: 8.77 (81.67%) | Rank: Top 10 in University.</div>
+                </div>
+            </div>
+
+            <!-- Honors & Awards -->
+            <div class="mb-3">
+                <h2 class="section-title fs-5 fw-medium">Honors & Distinctions</h2>
+                <ul class="text-secondary fw-light list-unstyled mb-0 ps-1" style="font-size: 1.05rem;">
+                    <li class="cv-list-item mb-4"><strong class="text-dark fw-medium pe-2">GATE Examination (2023)</strong> <span style="font-style: italic;">Qualified</span> — Prestigious national comparative evaluation in comprehensive Physics.</li>
+                    <li class="cv-list-item mb-4"><strong class="text-dark fw-medium pe-2">JAM & JEST (2021)</strong> <span style="font-style: italic;">Qualified</span> — Selective Indian national science entrance examinations.</li>
+                    <li class="cv-list-item mb-4"><strong class="text-dark fw-medium pe-2">DST INSPIRE SHE</strong> <span style="font-style: italic;">Fellowship</span> — Granted exclusively to the top 1% of science undergraduates continuously executing nationwide.</li>
+                    <li class="cv-list-item mb-4"><strong class="text-dark fw-medium pe-2">JBNSTS Exigency</strong> <span style="font-style: italic;">Senior Scholar</span> — Elevated placement amongst fifty premier scientific candidates across West Bengal.</li>
+                    <li class="cv-list-item"><strong class="text-dark fw-medium pe-2">Best Student Distinction (2016)</strong> — Commended for extreme academic aptitude spanning the West Bengal 10th Board evaluation systems.</li>
                 </ul>
             </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">Adaptive Sampling & Kinetic Network Modeling</div>
-                </div>
-                <ul class="item-bullets">
-                    <li>Developed and executed data-driven automated simulation protocols to efficiently navigate rugged free energy landscapes and isolate rare, under-sampled events.</li>
-                    <li>Constructed complex kinetic state-based networks to formally characterize biomolecular metastable states and long-timescale dynamic behavior.</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">Conformational Landscape Mapping Pipeline</div>
-                    <div class="item-date">Published 2025</div>
-                </div>
-                <ul class="item-bullets">
-                    <li>Benchmarked multiple dimensionality reduction and data clustering algorithms on folding models of the Trp-Cage mini-protein.</li>
-                    <li>Designed fully automated Python pipelines (utilizing Pandas and SciPy) to process and visualize large-scale high-dimensional thermodynamic metrics.</li>
-                </ul>
-            </div>
-            
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">Enhanced Sampling of Rare Events in MD Simulation</div>
-                    <div class="item-subtitle">M.Sc Project</div>
-                    <div class="item-date">Jan 2023 - May 2023</div>
-                </div>
-                <ul class="item-bullets">
-                    <li>Investigated the deep thermodynamic stability of Amyloid fibril systems using advanced Metadynamics techniques.</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Education -->
-        <div class="section">
-            <h2 class="section-title">Education</h2>
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">M.Sc in Physics</div>
-                    <div class="item-date">2021 - 2023</div>
-                </div>
-                <div class="item-subtitle">S.N. Bose National Centre for Basic Sciences</div>
-                <div class="item-desc">Graduated with 86% | 3rd highest scorer in class.</div>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <div class="item-title">B.Sc in Physics</div>
-                    <div class="item-date">2018 - 2021</div>
-                </div>
-                <div class="item-subtitle">Jadavpur University</div>
-                <div class="item-desc">81.67% (CGPA: 8.77) | Top 10 ranking in University.</div>
-            </div>
-        </div>
-
-        <!-- Publications -->
-        <div class="section">
-            <h2 class="section-title">Publications</h2>
-            <div class="item">
-                <div class="item-desc" style="color: var(--primary);">
-                    <strong>Mapping conformational landscape in protein folding: Benchmarking dimensionality reduction and clustering techniques on the Trp-Cage mini-protein</strong><br>
-                    <span style="color: var(--secondary); font-style: italic;">Biophysical Chemistry (2025)</span><br>
-                    <a href="https://doi.org/10.1016/j.bpc.2025.107389" style="color: var(--accent); text-decoration: none;">🔗 DOI: 10.1016/j.bpc.2025.107389</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Honors & Awards -->
-        <div class="section">
-            <h2 class="section-title">Honors & Awards</h2>
-            <ul class="item-bullets" style="list-style-type: square;">
-                <li><strong>GATE 2023 Qualified</strong> - Highly competitive national examination in Physics.</li>
-                <li><strong>JAM and JEST 2021 Qualified</strong> - National level physics entrance examinations.</li>
-                <li><strong>DST INSPIRE SHE Fellowship</strong> - Awarded to the top 1% of science students nationwide.</li>
-                <li><strong>JBNSTS Senior Scholar</strong> - Selected among the top 50 students in West Bengal.</li>
-                <li><strong>Best Student Award (2016)</strong> - Recognized for academic excellence in West Bengal 10th Board Exams.</li>
-            </ul>
         </div>
     </div>
 

@@ -1,21 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Current Year for Footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Current Year for Footer (with null check for resume page)
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
 
-    // Hamburger Menu Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    // Bootstrap Active Navigation Link handling on Scroll handled below
+    const navbarCollapse = document.getElementById('navbarNav');
     
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-
-    // Close Menu on Link Click
+    // Close Bootstrap Menu on Link Click
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                // Try closing with bootstrap instance if available, otherwise just use vanilla JS
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                } else {
+                    navbarCollapse.classList.remove('show');
+                }
+            }
         });
     });
 
@@ -64,35 +68,47 @@ document.addEventListener('DOMContentLoaded', () => {
         fadeObserver.observe(el);
     });
 
-    // Sticky Navbar Styling on Scroll
+    // Sticky Navbar Styling on Scroll (with null check for resume page)
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.padding = '0.5rem 2rem';
-            navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
-        } else {
-            navbar.style.padding = '1.2rem 2rem';
-            navbar.style.boxShadow = 'none';
-        }
-    });
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.padding = '0.5rem 0';
+                navbar.classList.add('shadow-sm');
+                navbar.style.background = 'rgba(252, 252, 250, 0.98)';
+            } else {
+                navbar.style.padding = '1.2rem 0';
+                navbar.classList.remove('shadow-sm');
+                navbar.style.background = 'transparent';
+            }
+        });
+    }
 
-    // Gallery Click Lightbox
+    // Gallery Click Lightbox logic
     const lightbox = document.createElement('div');
     lightbox.id = 'lightbox';
     const lightboxImg = document.createElement('img');
     lightbox.appendChild(lightboxImg);
     document.body.appendChild(lightbox);
 
-    document.querySelectorAll('.gallery-item img, .zoomable').forEach(img => {
-        img.addEventListener('click', () => {
-            lightboxImg.src = img.src;
-            lightbox.classList.add('active');
+    // Only select actual image elements that have the zoomable class or are inside a gallery item
+    document.querySelectorAll('img.zoomable, .gallery-item img, img.idp-image').forEach(img => {
+        // Add cursor style for UX
+        img.style.cursor = 'zoom-in';
+        
+        img.addEventListener('click', (e) => {
+            e.stopPropagation(); // Stop bubbling immediately
+            
+            // Just double check we have a source before opening
+            if(img.src) {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            }
         });
     });
 
     lightbox.addEventListener('click', () => {
         lightbox.classList.remove('active');
     });
-
 
 });
