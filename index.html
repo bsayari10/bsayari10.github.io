@@ -19,7 +19,7 @@
     <!-- Navigation -->
     <nav id="navbar" class="glass-nav">
         <div class="nav-container">
-            <a href="#home" class="logo" style="display: flex; align-items: center; gap: 10px;">
+            <a href="#home" class="logo">
                 <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
                     style="width: 32px; height: 32px; color: var(--accent-1);">
                     <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="2" opacity="0.8" />
@@ -46,6 +46,16 @@
             </div>
         </div>
     </nav>
+    <!-- Mobile slide-in menu (outside nav to avoid backdrop-filter containing block) -->
+    <div class="mobile-menu-panel" id="mobileMenuPanel">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#education">Education &amp; Awards</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-backdrop" id="navBackdrop"></div>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
@@ -130,7 +140,8 @@
                         interactions</strong> are essential. However, this flexibility also makes them vulnerable.
                     Misregulated interactions can lead to <strong>pathological assemblies like amyloid fibrils</strong>.
                     These systems often undergo <strong>disorder to order transitions</strong>, which remains an
-                    intriguing challenge in modern biophysics.</p>
+                    intriguing challenge in modern biophysics.
+                </p>
             </div>
             <div class="idp-img-container">
                 <img src="assets/Fig1.png" alt="IDP Ensemble Visualization" class="idp-image zoomable">
@@ -153,7 +164,8 @@
                     requires a <strong>unified view of thermodynamics and kinetics</strong>. Concepts like entropy,
                     conformational diffusion, and energy barriers are essential tools. IDPs bridge ideas from
                     <strong>statistical physics and complex systems</strong>, making them a uniquely rich problem at the
-                    interface of physics and biology.</p>
+                    interface of physics and biology.
+                </p>
             </div>
         </div>
     </section>
@@ -294,7 +306,8 @@
                             <h4
                                 style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 0.5rem; font-weight: 500;">
                                 S.N. Bose National Centre</h4>
-                            <p style="font-size: 0.95rem;">Investigating Intrinsically Disordered Proteins and aggregation.</p>
+                            <p style="font-size: 0.95rem;">Investigating Intrinsically Disordered Proteins and
+                                aggregation.</p>
                         </div>
                     </div>
                     <div class="timeline-item glass-panel mt-4">
